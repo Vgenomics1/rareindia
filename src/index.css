@@ -113,3 +113,68 @@
     background: linear-gradient(135deg, #4C51BF 0%, #6B46C1 100%);
   }
 }
+
+/* Enhanced animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes slideInLeft {
+  0% { transform: translateX(-30px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+  0% { transform: translateX(30px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.animate-slide-left {
+  animation: slideInLeft 0.7s ease-out forwards;
+}
+
+.animate-slide-right {
+  animation: slideInRight 0.7s ease-out forwards;
+}
+
+/* Enhanced interactive elements */
+.hover-grow {
+  transition: transform 0.2s ease;
+}
+
+.hover-grow:hover {
+  transform: scale(1.05);
+}
+
+/* Enhanced testimonial cards */
+.testimonial-card {
+  @apply bg-white rounded-xl shadow-lg p-6 transition-all duration-300;
+}
+
+.testimonial-card:hover {
+  @apply shadow-xl transform -translate-y-1;
+}
+
+/* Glass effect */
+.glass {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}

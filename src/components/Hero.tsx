@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 
 const Hero: React.FC = () => {
   return (
@@ -17,7 +18,7 @@ const Hero: React.FC = () => {
           <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in">
             <Button 
               size="lg" 
-              className="bg-white text-rare-purple hover:bg-gray-100"
+              className="bg-white text-rare-purple hover:bg-gray-100 transition-all transform hover:scale-105"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Apply for Testing
@@ -25,11 +26,29 @@ const Hero: React.FC = () => {
             <Button 
               size="lg" 
               variant="outline"
-              className="border-white text-white hover:bg-white/10"
+              className="border-white text-white hover:bg-white/10 transition-all transform hover:scale-105"
               onClick={() => document.getElementById('collaborate')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Join as Collaborator
             </Button>
+          </div>
+          
+          <div className="mt-16 flex flex-wrap justify-center items-center gap-8 sm:gap-12">
+            <div className="text-center">
+              <p className="text-sm uppercase tracking-wider mb-2 opacity-80">A collaborative initiative by</p>
+              <div className="flex items-center justify-center gap-8 sm:gap-12 mt-4">
+                <img 
+                  src="/vgenomics-logo.png" 
+                  alt="VGenomics" 
+                  className="h-10 sm:h-12 bg-white p-1 rounded animate-fade-in" 
+                />
+                <img 
+                  src="/meril-logo.png" 
+                  alt="Meril Genomics" 
+                  className="h-10 sm:h-12 bg-white p-1 rounded animate-fade-in" 
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
