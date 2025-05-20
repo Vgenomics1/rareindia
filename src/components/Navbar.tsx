@@ -32,10 +32,10 @@ const Navbar: React.FC = () => {
             <span className="text-xl md:text-2xl font-bold text-rare-blue">RARE</span>
             <span className="text-xl md:text-2xl font-bold text-rare-purple">-INDIA</span>
           </a>
-          <div className="hidden md:flex items-center ml-6 gap-4">
+          {/* <div className="hidden md:flex items-center ml-6 gap-4">
             <img src="/vgenomics-logo.png" alt="VGenomics" className="h-8" />
             <img src="/meril-logo.png" alt="Meril Genomics" className="h-8" />
-          </div>
+          </div> */}
         </div>
 
         {/* Desktop navigation */}
@@ -43,25 +43,27 @@ const Navbar: React.FC = () => {
           <a href="#overview" className="text-gray-700 hover:text-rare-purple transition-colors font-medium">Overview</a>
           <a href="#offerings" className="text-gray-700 hover:text-rare-purple transition-colors font-medium">What We Offer</a>
           <a href="#collaborate" className="text-gray-700 hover:text-rare-purple transition-colors font-medium">Collaborate</a>
-          <Button 
-            className="gradient-bg hover:opacity-90 transition-transform hover:scale-105" 
+          <Button
+            className="gradient-bg hover:opacity-90 transition-transform hover:scale-105"
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
           >
             Join Program
           </Button>
-          <Button 
-            className="bg-emerald-500 hover:bg-emerald-600 text-white transition-transform hover:scale-105" 
-            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-          >
-            <Check size={18} className="mr-1" /> Check Eligibility
-          </Button>
+          <a href=" https://niptform.onrender.com">
+            <Button
+              className="bg-emerald-500 hover:bg-emerald-600 text-white transition-transform hover:scale-105"
+            // onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              <Check size={18} className="mr-1" /> Check Eligibility
+            </Button>
+          </a>
         </nav>
 
         {/* Mobile menu button */}
         <div className="md:hidden flex items-center gap-4">
-          <Button 
-            size="sm" 
-            className="bg-emerald-500 hover:bg-emerald-600 text-white" 
+          <Button
+            size="sm"
+            className="bg-emerald-500 hover:bg-emerald-600 text-white"
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
           >
             Check Eligibility
