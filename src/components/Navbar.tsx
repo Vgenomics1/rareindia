@@ -49,7 +49,7 @@ const Navbar: React.FC = () => {
           >
             Join Program
           </Button>
-          <a href=" https://niptform.onrender.com">
+          <a href="http://34.93.204.92:3000/dashboard">
             <Button
               className="bg-emerald-500 hover:bg-emerald-600 text-white transition-transform hover:scale-105"
             // onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
